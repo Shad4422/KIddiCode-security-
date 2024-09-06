@@ -1,0 +1,1134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-color: #ffffff;
+height: 100%;
+font-family: "Nunito", sans-serif;
+line-height: 1.5;
+-webkit-text-size-adjust: 100%;
+}
+
+
+/* ============================================================================================================ 
+  ---------------------------------------------- hedar and footer ---------------------------------------------- 
+===============================================================================================================*/   
+
+header{
+    position: fixed;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px #b9e8e6(0, 0, 0, 0.15);
+    width: 100%;
+    height: 12%;
+
+    /* hero */
+    z-index: 1;
+
+}
+.page-header{
+    position:relative ;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px #b9e8e6(0, 0, 0, 0.15);
+    width: 100%;
+    top: 0;  
+}
+
+.navbar-item {
+    margin: 0.7em;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    max-width:95%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.logo{
+    cursor:pointer; 
+    height: 100px;
+    width:auto ;
+    margin-right: auto;  
+}
+
+/* ======================================== 
+                 footer
+==========================================*/ 
+footer {
+    background-color: #c3e1dc86;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.15);
+    color: #2c4c4a; 
+    text-align: center;
+    font-size: 16px; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#page_footer{
+    background-color: #c3e1dc86;
+    box-shadow:none;
+    color: #2c4c4a; 
+    text-align: center;
+    font-size: 16px; 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: -2;
+}
+
+footer p{
+    margin-top: 0%;
+    text-decoration:none;
+    z-index: -1;
+}
+
+/* ============================================================================================================ 
+  ----------------------------------------------  Sign in page ---------------------------------------------- 
+===============================================================================================================*/    
+
+.modal{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #E5FDFF;
+    box-shadow: 0px 3px 5px #E5FDFF;
+    width: 100%; 
+    border-radius: 5px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    max-width:85%;
+    overflow: hidden;   
+}
+
+.modal h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 5px;
+    
+  }
+.modal  .p{
+    font-size: 16px; 
+    font-weight: 400;
+    color: #000000; 
+    padding-top: 3px;
+    padding-bottom: 20px;
+}
+
+ #modal-left-req h1 {
+    font-size: 30px;
+    padding-bottom: 0%;
+  }
+
+#modal-left-req .p {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+
+  
+/* ======================= 
+        modal-right
+========================*/    
+
+.modal-right{
+    z-index: -1;
+    flex: 2;
+    transition: 0.3s;
+    overflow:hidden;
+    object-fit: cover; 
+}
+
+.Sign__img{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit:cover; 
+    width: 60vh;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
+.req__img{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit:cover; 
+    width: 60vh;
+    height: 80vh;
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
+
+
+/* ======================= 
+        modal-left
+========================*/  
+
+
+.modal-left {
+    position: relative;
+    opacity: 1;
+    background-color:#e5fdff7c;
+    padding: 80px;
+  }
+
+  #modal-left-req{
+    padding :50px;
+    justify-content:center;
+    align-items: center;
+    
+  }
+
+.modal-buttons{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 10px;
+
+}
+
+.modal-button{
+    opacity: 0;
+}
+
+
+.input-button {
+    padding:  8px 40px;
+    margin-right: 20px;
+    outline: none;
+    border: 0;
+    border-radius: 40px;
+    background: #77CBD1;
+    transition: 0.3s;
+    cursor: pointer;
+    color:#000000;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content:center;
+}
+  
+.input-button:hover {
+  background: #77cbd17f;
+}
+  
+
+.input-label {
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 0.7px;
+color: #423938;
+transition: 0.3s;
+}
+
+.input-block {
+display: flex;
+flex-direction: column;
+padding: 5px 10px 5px;
+border: 2px solid #423938;
+border-radius: 4px;
+margin-bottom: 10px;
+transition: 0.3s;
+background-color: #fff;
+}
+
+.input-block input {
+outline: 0;
+border: 0;
+font-size: 14px;
+}
+        
+input::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+
+  .sign-up {
+  text-align: center;
+  font-size: 15px; 
+  font-weight: 400;
+  color: #40405B; 
+  padding-top: 10px;
+
+}
+                  
+ .modal a {
+    font-size: 15px; 
+    font-weight: 600;  
+    color:#363030;
+    cursor: pointer;
+ }
+ .modal a:hover {
+    color: #CE9F9B;
+    font-size: 17px; 
+}
+
+
+/* ============================================================================================================ 
+  ----------------------------------------------  Sign up page ---------------------------------------------- 
+===============================================================================================================*/  
+#parent-signup{
+    background-image: linear-gradient(#8c75693f,#8c756925) ,url(../images/h1.jpg);
+    background-size:cover;
+    background-position:center ;
+    background-attachment:fixed;
+   }
+
+
+#tutor-signup{
+    background-image: linear-gradient(#8c75693f,#8c756925) ,url(../images/h3.jpg);
+    background-size:cover;
+    background-position:center ;
+    background-attachment:fixed;
+   }
+
+
+#modal_sign_up{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 0%;
+    top: 0%;
+    transform: translate(35%,-1%);
+    margin-top: 5%;
+    margin-bottom: 0%;
+    width: 60%; 
+    display: flex;
+    flex-direction:column;  
+}
+
+#modal_sign_up h1 {
+    text-align: center;
+    font-size: 30px;
+    
+
+    
+  }
+#modal_sign_up .p {
+    text-align: center;  
+    padding-bottom: 10px;  
+  }
+
+
+ 
+  .choose_button{
+    opacity: 0;
+    overflow: hidden;
+    
+  }
+  
+ .choose_button__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 5px 10px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #40405B;
+    background-color: #ce9f9b47;
+    box-shadow: 0px 3px 5px #D3CCBF;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+
+  .choose_button__label:hover {
+    background: #CE9F9B;
+  }
+  
+  .choose_button__label  img{
+    height: 30px;
+    margin-right: 4px;
+  }
+
+ 
+.SignUP__img{
+    width: 20vh;
+    height: 20vh;
+    margin-left: 30%;
+}
+
+
+  .input-block select {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #ccc;
+    opacity: 1;
+ }
+  iframe{
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+  
+  .input-radio{
+    display:inline-block ;
+  }
+
+ 
+  #bio{
+    outline: none;
+    border: none;
+    font-size: 14px;
+  }
+
+  #bio::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+
+  /* ============================================================================================================ 
+  ---------------------------------------------- button ---------------------------------------------- 
+===============================================================================================================*/  
+button{
+  position: relative;
+  padding: 5px 25px;
+  background-color:#a9807d ;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #F5F3F2; 
+}
+
+button:hover {
+  background-color: #CE9F9B;
+}
+
+.back-button{
+ margin-right: 93%;
+ margin-top: 1%;
+}
+
+  /* ============================================================================================================ 
+  ---------------------------------------------- request list ---------------------------------------------- 
+===============================================================================================================*/ 
+
+.request{
+  position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #E9E5DF;
+    box-shadow: 0px 3px 5px #D3CCBF;
+    width: 100%; 
+    border-radius: 5px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction:column;
+    max-width:85%;
+    overflow: hidden;   
+}
+
+#req{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  left: 0%;
+  top: 0%;
+  transform: translate(35%,-1%);
+  margin-top: 4%;
+  margin-bottom: 5%;
+  width: 60%; 
+  display: flex;
+  flex-direction:column; 
+}
+
+@media screen and (max-width: 1000px){
+  #req{
+    margin-top: 8%;
+    margin-bottom: 10%;
+  }
+}
+
+.req-left-block{
+  position: relative;
+  margin-left: 28%;
+margin-top: 2%;
+}
+
+.h1{
+  margin-bottom: 10px;
+}
+ 
+.request-block{
+  position: relative;
+border: 2px solid #B0A29B;
+border-radius: 4px;
+margin-bottom: 20px;
+margin-top: 20px;
+transition: 0.3s;
+background-color: #fff; 
+width: 85%;
+height: 25%;
+overflow: hidden;
+}
+
+#heading{
+text-align: center;
+  transform: translate(0,25%);
+color: #8e5757;
+z-index: 1;
+margin-top: 10px;
+}
+
+.request-p{ 
+font-size: 13px;
+text-shadow: 3px 3px #E0E2EA; 
+font-weight: 600;
+letter-spacing: 0.7px;
+transition: 0.3s;
+padding-top: 5px;
+overflow: scroll;
+padding-left: 2%;
+}
+
+.modal-left .request-p {
+  margin-left: 50px;
+   overflow: hidden;
+}
+
+.request-p ::after{
+  content:"\a" ;
+  white-space: pre;
+}
+
+.request-p span{
+color: #806464;
+}
+
+.ID{
+ float: left;
+ position: relative;
+ margin: 13px;
+ background-color: #E6D6D5;
+ border:#E6D6D5 30px solid;
+ border-radius: 4px;
+ background-attachment: fixed;
+}
+
+
+.request-button{
+float: right;
+margin-right: 10px;
+margin-top: 10px;
+background-attachment: scroll;
+}
+
+  
+.request-button1{
+  margin-top: 5px;
+  margin-left: 85%;
+ }
+ 
+.request-button2{
+  float: right;
+margin-right: -75px;
+margin-top: 40px;
+background-attachment: fixed;
+}
+
+
+
+.request-button2 button{
+  background-color: rgb(238, 96, 96);
+  width: 75px;
+  padding-left: 20%;
+  
+}
+
+  /* ============================================================================================================ 
+  ---------------------------------------------- offer ---------------------------------------------- 
+===============================================================================================================*/  
+.offer-p{ 
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 3px 3px #E0E2EA; 
+  letter-spacing: 0;
+  transition: 0.3s;
+  padding-top: 30px;
+  overflow: hidden;
+  padding-left: 2%;
+  }
+
+.offer-p ::after{
+      content:"\a" ;
+      white-space: pre;
+  }
+
+  .peroffer{
+    width: 10%;
+    height: 10%;
+    border-radius: 50% !important;
+    border-color: #e6deda8e #40405B #40405B  #e6deda95 ;
+   border-style:inset;
+   border-width: 0.10cm;
+   margin-top: 1%;
+   margin-left: 1%;
+   float: left;
+   margin-bottom: 1%;
+  }
+  
+  .request-button3{
+      float: right;
+      margin-right: -90px;
+      margin-top: 40px;
+      
+  }
+
+  .request-button3 button{
+    background-color: rgb(115, 169, 135);
+}
+
+  .request-button4{
+      float: right;
+      margin-right: -90px;
+      margin-top: 70px;
+  }
+
+  .request-button4 button{
+      background-color: rgb(238, 96, 96);
+  }
+
+  .edit-button button{
+      padding: 9px 60px;
+  outline: none;
+  border: 0;
+  color: #fff;
+  border-radius: 40px;
+  background: #8c7569;
+  font-family: "Nunito", sans-serif;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  margin-left: 43%;
+  }
+
+  .edit-button button:hover {
+      background: #CEB0AE;
+  }
+
+
+  /* ============================================================================================================ 
+  ---------------------------------------------- request ---------------------------------------------- 
+===============================================================================================================*/  
+#modal-request{
+  margin-top: 1%;
+  align-items: center;
+  justify-content: center;
+} 
+#modal-left-req h1 {
+  font-size: 30px;
+  padding-bottom: 0%;
+
+}
+
+#modal-left-req .p {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+
+#modal-left-req{
+  padding :29px;
+
+  
+}
+
+.req__img{
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit:cover; 
+  width: 60vh;
+  height: 80vh;
+  position: absolute;
+  right: 0;
+  top: 0; 
+}
+
+/* ============================================================================================================ 
+----------------------------------------------  view booking , jobs ---------------------------------------------- 
+===============================================================================================================*/  
+
+.shad{
+  padding: 1%;
+  height: 10%;
+  width: 70%;
+  color:  #555;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  display: flex;
+  margin-left: 15%;
+  border-radius: 50px;
+  background-color: #E9E5DF;
+ 
+}
+
+/* ======================= 
+     pic-left
+========================*/    
+
+
+.shad .picTuter{
+  height: 20%;
+  width: 35%;
+  color:  #555;
+  border-radius: 5px;
+  display: inline-block;
+  border-radius: 50px;
+  background:  #D3CCBF;
+ margin-left: 2%;
+}
+.shad h2{
+  font-size: x-large;
+  padding: 1%;
+  color: #40405B;
+  text-shadow: 3px 3px #E0E2EA; 
+}
+.shad h4{
+  font-size: x-large;
+  padding: 1%;
+  text-shadow: 3px 3px #E0E2EA; 
+  color: #40405B;}
+   .shad h5{
+   font-size: large;
+   padding: 1%;
+   color: #40405B;
+   text-shadow: 3px 3px #E0E2EA; }
+
+.per{
+  width: 60%;
+  height: 60%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+  border-color: #e6deda8e #40405B #40405B  #e6deda95 ;
+ border-style:inset;
+ border-width: 0.45cm;
+ margin-left: 15% ;
+ 
+}
+
+
+/* ======================= 
+      info-rigth
+========================*/    
+
+
+.shad .infoTuter{
+  height: 80%;
+  width: 45%;
+  padding: 1% 2%;
+  color:  #555;
+  border-radius: 5px;
+  border-radius: 50px;
+  background: #D3CCBF;
+  flex-direction: row;
+  float:right;
+  margin-left: 8%;
+}
+
+
+
+.bio-row{   padding: 0.5%;
+  width: 80%;
+  color: #40405B;
+  background-color: #a9807d53;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  display: inline-block;
+  margin-left: 8%;
+  font-size: medium;
+      }
+
+ .btn{
+position: absolute;
+margin-top: 21%;
+margin-left: 6%;
+padding-left: 25px;
+ }
+ .btn-p-b{position: absolute;
+  margin-top: 17%;
+  margin-left: 12%;
+  padding-left: 25px;
+ }
+.btn-contcat{
+    background-color:#8064646b;
+    border-radius: 30px;
+    color: #40405B;
+    font-size: large;
+   
+}
+.button-review {
+  margin-left: 25%;
+  margin-top: 100%;
+    background-color:#8064646b;
+    border-radius: 30px;
+    color: #40405B;
+    font-size: large;
+    margin-left: -90px;
+    margin-top: 90%;
+      
+  }
+
+
+/* ======================= 
+      Start Rating
+========================*/  
+  .checked {
+    color:rgba(255, 200, 0, 0.82);
+     }
+  
+     /* ============================================================================================================ 
+  ----------------------------------------------  tuter & parent info  page --------------------------------------
+===============================================================================================================*/  
+.shad-pro{
+  padding: 1%;
+  width: 65%;
+  height: 30%;
+  color:  #555;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  display: flex;
+  margin-left: 15%;
+  border-radius: 50px;
+  background: linear-gradient(to right,#40405B,#9F9FAD);}
+
+.cont-sha{ 
+  width: 100%;
+  height: 100%;
+  color:  #555;
+  margin-bottom: 3%;
+  background-color: #E9E5DF;}
+
+.page2-sh{ 
+  width: 200%;
+  height: 100%;
+  color:  #555;
+  margin-bottom: 3%;}
+
+.sho-h {
+  font-size: 35px;
+  margin: 0;
+  font-weight: 600;
+  color: #40405B;
+  padding-top: 3%;
+  text-shadow: 3px 3px #E0E2EA; 
+  display:inline-block;
+  padding-left: 10%;
+}
+  
+/* ======================= 
+       pic-left
+ ========================*/    
+
+.rating-pic-sha{
+  float: left;
+  margin-left: 0%;}
+  
+.shad-pro .picTuter{
+  height: 90%;
+ width: 30%;
+ padding: 1% ;
+ color:  #555;
+ border-radius: 5px;
+ margin-bottom: 3%;
+ display: inline-block;
+ margin-left: 2%;
+ border-radius: 50px;
+ background:#E9E5DF;}
+
+.pic-con-sh h2{
+ font-size: xx-large;
+ padding: 1%;
+ color: #40405B;
+ text-shadow: 3px 3px #E0E2EA; 
+ text-align: center;}
+ .shad-pro .per{
+  float: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+  border-color: #e6deda8e #40405B #40405B  #e6deda95 ;
+ border-style:inset;
+ border-width: 0.45cm; }
+     
+  /* ======================= 
+      info-rigth
+ ========================*/  
+ .profile-content{ height: 90%;
+  width: 60%;
+  padding: 1% 2%;
+ color:  #555;
+  border-radius: 5px;
+  margin-left: 50%;
+  border-radius: 50px;
+  flex-direction: row;}
+  
+.shad-pro .infoTuter{
+ height: 90%;
+  width: 60%;
+  color:  #555;
+  border-radius: 5px;
+  margin-left: 5%;
+  border-radius: 50px;
+  background:#E9E5DF;
+  flex-direction: row;}
+
+ .shad-pro .bio-row{   padding: 1% 2%;
+ width: 70%;
+ color: #40405B;
+  background-color:#9f9fad52;
+ border-radius: 30px;
+  margin-bottom: 4%;
+  display: inline-block;
+ margin-left: 15%;
+  font-size: x-large; }
+          
+ .shad-pro .bio-row p span {
+ width: 100px; }
+
+ /* ======================= 
+    Rating and reviews
+========================*/ 
+  
+.rate-pro-shad{
+  padding: 1% 3%;
+  width: 180%;
+  color:  #555;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  border-radius: 50px;
+  background: linear-gradient(to left,#40405B,#9f9fade2);
+  padding: 30px 25px; }
+
+.title-rate-sh h4{
+margin-left: 2%; 
+text-shadow: 3px 1px #E0E2EA;
+font-size:x-large;
+}
+.title-rate-sh p{
+margin-left: 4%; 
+font-size:large;
+text-shadow: 1px 1px 3px #E9E5DF;
+}
+.cont-sha{display:flex;}
+.ratings-sh{
+  margin-right:10px;
+  margin-bottom: 1%;
+  margin-left: 1%; 
+  color: #40405B;;
+  font-size:25px; 
+}
+.img-rate-sh{
+height: 80%;
+width: 80%;
+}
+.img-map-sh{
+  height: 60%;
+  width: 60%;
+  }
+.ratings-sh p{
+font-size: medium;
+color: #40405B;
+text-align: left;
+background-color: #D3CCBF;
+}
+ .Edit-button{
+ 
+    padding:  8px 40px;
+    outline: none;
+    border: 0;
+    border-radius: 40px;
+    background: #b79d8e;
+    transition: 0.3s;
+    cursor: pointer;
+    color:#363030;
+    font-size: 160%;
+    font-weight: 600;
+    justify-content:center;
+    margin-right: 10%;
+}
+
+.delet-button{
+  padding:  8px 40px;
+  outline: none;
+  border: 0;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  color:#363030;
+  font-size: 160%;
+  font-weight: 600;
+  justify-content:center;
+  background-color: rgb(238, 96, 96);}
+
+  .Map-pro{padding-top: 3%;
+    height: 60%;
+    width: 180%;
+  }
+  /* ============================================================================================================ 
+---------------------------------------------- sign up as---------------------------------------------- 
+===============================================================================================================*/  
+  .sign-shad{
+     position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #E9E5DF;
+    box-shadow: 0px 3px 5px #D3CCBF;
+    width: 100%; 
+    border-radius: 5px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    max-width:85%;
+    overflow: hidden;   
+  
+}
+ .left-side-sh-t ,.rigth-side-sh-p {
+    height:380px;
+    width: 380px;
+    color:  #555;
+    display: inline-block;
+    border-radius: 50px;
+    background: #E9E5DF ;
+    margin-left: 3%;
+  }
+  .rigth-side-sh-p{
+    margin-left: 18%;
+  }
+
+.pic-sign{
+  width: 60%;
+  height: 60%;
+ margin-left: 15% ;
+ margin-bottom: 5% ;
+
+}
+
+ .parent-sign ,.tuter-sign {
+  padding: 1%;
+  padding-bottom:1% ;
+
+ }
+
+ .tuter-sign {
+  padding-bottom:3% ;
+  margin-bottom: 4% ;
+ }
+
+ .parent-sign .button-move ,.tuter-sign .button-move{
+  margin-left: 25% ;
+ }
+ .button-move{
+  padding:  8px 40px;
+    border: 0;
+    border-radius: 40px;
+    background: #8c75697c;
+    cursor: pointer;
+    color:#363030;
+    font-size: 160%;
+    font-weight: 600;
+    justify-content:center;
+    margin-right: 10%; 
+ }
+ .sign-shad h2{
+  font-size: x-large;
+  padding: 1%;
+  text-shadow: 3px 3px #E0E2EA; 
+  color: #40405B;
+text-align: center;
+text-transform:capitalize;
+ }
+
+
+ #sho-h2 {
+  font-size: 35px;
+  margin: 0;
+  font-weight: 600;
+  color: #40405B;
+  padding-top: 3%;
+  text-shadow: 3px 3px #E0E2EA; 
+   text-align: center;
+}
+  
+  #errorMessage{
+    color: red ;
+  }
+  /* ============================================================================================================ 
+---------------------------------------------- tut rev---------------------------------------------- 
+===============================================================================================================*/
+/*no errors*/
+.star-rating form {
+  display: none;
+}
+
+.star-rating input {
+  display: none;
+}
+.star-rating {
+  margin: 50px auto;
+  display: table;
+  width: 350px;
+}
+.star-rating label {
+  padding: 10px;
+  float: right;
+  font-size: 44px;
+  color: #eee;
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+  color: #ffc107;
+}
+.star-rating input:checked ~ label {
+  color: #ffc107;
+}
+.star-rating form .rating-reaction:before {
+  width: 100%;
+  float: left;
+  color: #ffc107;
+}
+
+.star-rating input:checked ~ form {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding-top: 15px;
+  margin-top: 15px;
+  display: inline-block;
+}
+#exampleModal{
+display: none;
+}
+
+
+

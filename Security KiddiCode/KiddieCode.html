@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<form>
+    <div class="modal">
+        <div class="modal-left">
+            <h1>Welcome!</h1>
+            <p class="p">Enter your text please</p>
+            <div class="input-block">
+                <label class="input-label">TEXT</label>
+                <input name="input" id="input" placeholder="Text">
+            </div>
+
+            <div class="modal-buttons">
+                <!-- Add type="button" to prevent form submission -->
+                <button type="button" class="input-button" onclick="encryption()">Encryption</button>
+                <button type="button" class="input-button" onclick="decryption()">Decryption</button>
+            </div>
+
+            <label id="output"></label>
+        </div>
+        <div class="modal-right">
+            <img src="logo.png" alt="background" class="Sign__img">
+        </div>
+    </div>
+</form>
+
+<footer class="navbar" id="page_footer">
+    <p> &copy; 2023 Kiddie Code <br>
+    <a>Sarah Alkhuraiji - Shaden Alabdulrazag - Hoor Rammal - Nouf Alkhashan - Weam Alahmadi</a></p>  
+</footer>
+
+<!-- Correct JavaScript file inclusion -->
+<script src="index.js"></script>
+
+</body>
+</html>
